@@ -3,7 +3,11 @@
   <p>Anagrams for "<%= @word %>":</p>
   <br>
   <div id = "anagrams">
-    <%= Word.anagrams(@word).map {|w| w.text}.join('<br>') %>
+    <ul>
+      <% Word.anagrams(@word).each do |w| %>
+        <li> <%= w.text %> </li>
+      <% end %>
+    </ul>
   </div>
 </div>
 

@@ -13,3 +13,7 @@ th {
   color: red;
   left: 80px;
 }
+
+#anagrams li {
+  list-style:square;
+}

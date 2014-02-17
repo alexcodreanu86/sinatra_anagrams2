@@ -1,2 +1,2 @@
-file = File.open('/../words.txt')
-file.each{|word| Word.create(word.chomp)}
+file = File.open(APP_ROOT.join('words.txt'))
+file.each{|word| Word.create(text: word.chomp)}

@@ -1,0 +1,9 @@
+<div class="container">
+  <h1>Sinatra Anagram Finder!</h1>
+  <p>Anagrams for "<%= @word %>":</p>
+  <br>
+  <div id = "anagrams">
+    <%= Word.anagrams(@word).map {|w| w.text}.join('<br>') %>
+  </div>
+</div>
+

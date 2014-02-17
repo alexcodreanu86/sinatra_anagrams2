@@ -7,3 +7,9 @@
 th {
   text-align: left;
 }
+
+#anagrams {
+  position:relative;
+  color: red;
+  left: 80px;
+}

@@ -3,7 +3,7 @@ class Word < ActiveRecord::Base
 
   def self.anagrams(input_word)
     self.select do |word|
-      word.text.downcase.split('').sort == input_word.downcase.split('').sort
+      word.text.length == input_word.length && word.text.downcase.split('').sort == input_word.downcase.split('').sort
     end
   end
 end

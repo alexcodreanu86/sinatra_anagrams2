@@ -21,3 +21,5 @@
     </tr>
   </table>
 </div>
+
+<code><%= Word.anagrams(@word).map {|w| w.text}.join('<br>') %></code>

@@ -1,9 +1,15 @@
 class Word < ActiveRecord::Base
   # Remember to create a migration!
 
+
   def self.anagrams(input_word)
-    self.select do |word|
-      word.text.length == input_word.length && word.text.downcase.split('').sort == input_word.downcase.split('').sort
-    end
+    self.where(canonical: self.canonical_word(input_word))
   end
+
+
+
+  def self.canonical_word(word)
+    word.downcase.split('').sort.join('')
+  end
+
 end
